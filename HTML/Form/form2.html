@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(171, 171, 100);
+            margin-top: 10%;
+            width: 300px;
+            margin-left: 40%;
+        }
+        .navbar{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            ĐĂNG KÝ HỌC VIÊN
+        </div>
+        <div class="form">
+            <form action="https://www.google.com/">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <lable for="name" name="name">Họ và tên</lable>
+                        </td>
+                        <td>
+                            <input id="name" name="name" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="date" name="date">Ngày sinh</label>
+                        </td>
+                        <td>
+                            <input id="date" name="date" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Giới tính
+                        </td>
+                        <td>
+                            <input type="radio" name="gioitinh" value="nam">Nam
+                            <input type="radio" name="gioitinh" value="nu">Nữ
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td colspan="2">
+                            Địa chỉ
+                        </td>
+                        <td>
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="class">Lớp</label>
+                        </td>
+                        <td>
+                            <select id="class">
+                                <option value="lop1">Lớp 1</option>
+                                <option value="lop2">Lớp 2</option>
+                                <option selected>-Chọn lớp-</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="email" name="email">Email</label>
+                        </td>
+                        <td>
+                            <input id="email" type="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="phone" name="phonenumber">Số điện thoại</label>
+                        </td>
+                        <td>
+                            <input id="phone" name="phonenumber" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+    
+                        </td>
+                        <td>
+                            <button type="submit">Đăng Ký</button>
+                            <button type="reset">Nhập lại</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
