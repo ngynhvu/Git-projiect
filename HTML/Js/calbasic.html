@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="firstNumber" type="number">
+    <input id="secondNumber" type="number"> <br>
+    <button type="button" onclick="calBasic('+')">Addition(+)</button>
+    <button type="button" onclick="calBasic('-')">Subtraction(-)</button>
+    <button type="button" onclick="calBasic('*')">Multiplication(*)</button>
+    <button type="button" onclick="calBasic('/')">Division(/)</button>
+    <div id="sum"></div>
+
+    <script>
+        function calBasic(x){
+            let A = document.getElementById("firstNumber").value;
+            let B = document.getElementById("secondNumber").value;
+            switch(x){
+                case '+': result = parseInt(A) + parseInt(B); break;
+                case '-': result = parseInt(A) - parseInt(B); break;
+                case '*': result = parseInt(A) * parseInt(B); break;
+                case '/': result = parseInt(A) / parseInt(B); break;
+            }
+            document.getElementById('sum').innerHTML='Result :' +result;
+        }
+    </script>
+</body>
+</html>

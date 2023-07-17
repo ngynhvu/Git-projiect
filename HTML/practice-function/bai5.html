@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Enter a Star</label>
+    <input id="element" type="text" />
+    <button type="button" onclick="alert(checkIndex())">Enter</button>
+    <script>
+      let array1 = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let array2 = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      function checkIndex(index) {
+        index = document.getElementById("element").value;
+        for (i = 0; i < array1.length; i++) {
+          if (index == array1[i]) {
+            return "Name of " + array1[i] + ": " + array2[i];
+          }
+        }
+        return "Im sorry i cant find that star";
+      }
+    </script>
+  </body>
+</html>

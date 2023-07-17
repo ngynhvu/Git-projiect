@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img style="height: 300px; width: 300px;" id="myImage" src="a.jpg"><br>
+    <p>Click button below to move the image to right</p>
+    <button type="button" onclick="moveRight()">Click me</button>
+
+
+    <script>
+        var imgme = document.getElementById("myImage");
+        function init(){
+            imgme.style.position = "relative";
+            imgme.style.left = "0px";
+        }
+        function moveRight(){
+            imgme.style.left = parseInt(imgme.style.left)+10+"px";
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>

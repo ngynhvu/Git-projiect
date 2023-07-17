@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(number) {
+        let result = "";
+        if (number == 1) {
+          result = number + " khong phai la so nguyen to";
+        } else if (number % 1 == 0 && number % number == 0) {
+          result = number + " la so nguyen to";
+        } else {
+          result = number + " khong phai la so nguyen to";
+        }
+        return result;
+      }
+      let number = +prompt("hay nhap mot so");
+      alert(isPrime(number));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array2d = [];
+      // row = +prompt("Hay nhap so dong:");
+      // col = +prompt("hay nhap so cot:");
+      row = 5;
+      col = 6;
+      for (i = 0; i < row; i++) {
+        array2d[i] = [];
+        for (j = 0; j < col; j++) {
+          // array2d[i][j] = prompt(
+          //   "Nhap phan tu:" + "[" + i + "]" + "[" + j + "]"
+          // );
+          array2d[i][j] = Math.floor(Math.random() * 50);
+        }
+      }
+      // let a = [];
+      // i = 0;
+      // while (i < 10) {
+      //   a[i] = prompt("nhap phan tu: " + i);
+      //   i++;
+      // }
+      // console.log(array2d);
+      // document.write(array2d.join(" "));
+      for (let i = 0; i < array2d.length; i++) {
+        const element1 = array2d[i];
+        for (let j = 0; j < element1.length; j++) {
+          const element2 = element1[j];
+          document.write(element2 + " ");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

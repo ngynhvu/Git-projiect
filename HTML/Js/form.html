@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <lable for="username">Account</lable>
+        </tr>
+        <tr>
+            <input id="username" type="text" name="username">
+        </tr>
+        <tr>
+            <lable for="Password">Password</lable>
+        </tr>
+        <tr>
+            <input id="Password" type="password" name="password">
+        </tr>
+        <tr>
+            <button type="button" onclick="logIn()">Log In</button>
+        </tr>
+    </table>
+
+
+    <script>
+        function logIn(){
+            let user = document.getElementById("username").value;
+            let password = document.getElementById("Password").value;
+            if(user == "Admin" && password == "TheMaster"){
+                alert("Welcome!");
+            }else if(user == null || password == null){
+                alert("Canceled.");
+            }else{
+                alert("Wrong password.");
+            }
+        }
+    </script>
+</body>
+</html>

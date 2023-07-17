@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+        .col1{
+            width: 300px;
+            height: 50px;
+        }
+        .col{
+            width: 140px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form action="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_radio">
+                <label for="age" name="age">What is your age range?</label><br>
+                <input id="age" name="age" type="number" placeholder="18-24"><br>
+                <label for="income" name="income">What is your yearly income range?</label><br>
+                <input for="income" name="income" tybe="income" placeholder="$0 - $25,000">
+                <p>Gender</p>
+                <input type="radio" name="Gender" value="Male"> Male <br>
+                <input type="radio" name="Gender" value="Female"> Female <br>
+                <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+                <input id="product1" type="checkbox" name="product" value="product1">
+                <label for="product1" name="product" value="product1">Product1</label><br>
+                <input id="product2" type="checkbox" name="product" value="product2">
+                <label for="product2" name="product" value="product2">Product2</label><br>
+                <input id="product3" type="checkbox" name="product" value="product3">
+                <label for="product3" name="product" value="product3">Product3</label><br>
+                <p>How often wuold you use our new product?</p>
+                <input id="daily" type="radio" name="use_product" value="Daily">
+                <label for="daily">Daily</label><br>
+                <input id="weekly" type="radio" name="use_product" value="Weekly">
+                <label for="weekly">weekly</label><br>
+                <input id="monthly" type="radio" name="use_product" value="Monthly">
+                <label for="monthly">Monthly</label><br>
+                <p>What would you pay for the new product?</p>
+                <table style="border: 0;">
+                    <tr>
+                        <td>
+                            $
+                        </td>
+                        <td>
+                            <input type="number" name="Dollars" style="width: 80px;;"> 
+                        </td>
+                        <td>
+                            .
+                        </td>
+                        <td>
+                            <input type="text" name="Cents" style="width: 20px;"> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            Dollars 
+                        </td>
+                        <td></td>
+                        <td>
+                            Cents
+                        </td>
+                    </tr>
+                </table>
+                <p>What features would you like to see in the new product.</p>
+                <textarea>
+
+                </textarea>
+                <table border="1">
+                    <tr class="row1">
+                        <td class="col1"></td>
+                        <td class="col">Strongly Disagree</td>
+                        <td class="col">Disagree</td>
+                        <td class="col">Agree</td>
+                        <td class="col">Strongly Agree</td>
+                    </tr>
+                    <tr class="row2">
+                        <td class="col1">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="col1">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                    </tr>
+                    <tr class="row4">
+                        <td class="col1">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                        <td class="col">z</td>
+                    </tr>
+
+                </table>
+        </form>
+    </div>
+</body>
+</html>

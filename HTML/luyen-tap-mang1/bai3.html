@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let max = +prompt("hay nhap do dai cua mang");
+      let array = [];
+      let total = 0;
+      let arrayMax = 0;
+      let S = 0;
+      for (i = 0; i < max; i++) {
+        array[i] = +prompt("nhap so nguyen vao mang");
+      }
+      for (i = 0; i < array.length; i++) {
+        if (arrayMax < array[i]) {
+          arrayMax = array[i];
+        }
+      }
+      for (i = 0; i < array.length; i++) {
+        total += array[i];
+      }
+      S = total / array.length;
+      document.write("phan tu co gia tri lon nhat la: " + arrayMax);
+      document.write("gia tri trung binh cua mang la: " + S);
+    </script>
+  </body>
+</html>

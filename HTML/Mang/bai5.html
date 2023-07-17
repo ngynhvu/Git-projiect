@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Caro Game Simple</h3>
+    <div id="carogame"></div>
+    <button type="button" value="change value" onclick="changeValue()">
+      Change Value
+    </button>
+    <script>
+      board = [];
+      for (i = 0; i < 5; i++) {
+        board[i] = [0, 0, 0, 0, 0];
+      }
+      data = "";
+      for (i = 0; i < 5; i++) {
+        data += "<br>";
+        for (j = 0; j < 5; j++) {
+          data = data + board[i][j] + "&nbsp;&nbsp;&nbsp";
+        }
+      }
+      document.getElementById("carogame").innerHTML = data;
+      function changeValue() {
+        let x = +prompt("X: ");
+        let y = +prompt("Y: ");
+        data = "";
+        board[x][y] = "x";
+        for (i = 0; i < 5; i++) {
+          data += "<br>";
+          for (j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+          }
+        }
+        document.getElementById("carogame").innerHTML = data;
+      }
+
+      console.log(board);
+    </script>
+  </body>
+</html>

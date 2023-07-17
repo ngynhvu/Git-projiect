@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="phutGoi">
+    <button type="button" onclick="showResult()">Xac Nhan</button>
+    <div id="result"></div>
+
+    <script>
+        function showResult(){
+            let phutGoi = document.getElementById("phutGoi").value;
+            if(phutGoi<5){
+                total = phutGoi * 1000;
+            }else if(phutGoi<10){
+                total = 5*1000 + (phutGoi-5)*800;
+            }else{
+                total = 5*1000 + 5*800 + (phutGoi-10)*500;
+            }
+            document.getElementById("result").innerText = total;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="docReady()">
+    <div
+      style="
+        width: 1280px;
+        height: 720px;
+        position: relative;
+        background-color: blueviolet;
+      "
+    >
+      <img
+        id="me"
+        src="a.jpg"
+        style="
+          position: relative;
+          height: 200px;
+          width: 100px;
+          top: 0px;
+          left: 0px;
+        "
+      />
+    </div>
+
+    <script>
+      function upArrowPressed() {
+        var element = document.getElementById("me");
+        console.log(element.style.top);
+        element.style.top = parseInt(element.style.top) - 50 + "px";
+      }
+      function downArrowPressed() {
+        var element = document.getElementById("me");
+        element.style.top = parseInt(element.style.top) + 50 + "px";
+      }
+      function leftArrowPressed() {
+        var element = document.getElementById("me");
+        element.style.left = parseInt(element.style.left) - 50 + "px";
+      }
+      function rightArrowPressed() {
+        var element = document.getElementById("me");
+        element.style.left = parseInt(element.style.left) + 50 + "px";
+      }
+      function moveSelection(evt) {
+        console.log(evt.keyCode);
+        switch (evt.keyCode) {
+          case 38:
+            upArrowPressed();
+            break;
+          case 40:
+            downArrowPressed();
+            break;
+          case 37:
+            leftArrowPressed();
+            break;
+          case 39:
+            rightArrowPressed();
+            break;
+        }
+      }
+      function docReady() {
+        window.addEventListener("keydown", moveSelection);
+      }
+    </script>
+  </body>
+</html>

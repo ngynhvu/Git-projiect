@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <script>
+        // let result = "";
+        // //result được gán cho dòng và cột
+        // for(i=1;i<11;i++){
+        //     result = result + "<tr>";
+        //     for(j=1;j<11;j++){
+        //         result = result + "<td>" +i*j + "</td>";
+        //     }
+        // }
+        // document.write(result);
+        let result="";
+        let i = j = 1;
+        while(i<11){
+            result = result +"<tr>";
+                while(j<11){
+                    result = result + "<td>" + i*j + "</td>";
+                    j++;
+                }
+                i++;
+                j=1;
+                
+        }
+        document.write(result);
+    </script>
+    </table>    
+</body>
+</html>

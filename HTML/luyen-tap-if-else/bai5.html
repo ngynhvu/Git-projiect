@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Nguyen Hoang Vu</p>
+    <input id="1-student1" type="number" placeholder="Kiem tra 1 tiet" />
+    <input id="2-student1" type="number" placeholder="kiem tra giua ki" />
+    <input id="3-student1" type="number" placeholder="Kiem tra cuoi ki" />
+    <p>Nguyen Hoang Bao Tram</p>
+    <input id="1-student2" type="number" placeholder="Kiem tra 1 tiet" />
+    <input id="2-student2" type="number" placeholder="kiem tra giua ki" />
+    <input id="3-student2" type="number" placeholder="Kiem tra cuoi ki" />
+    <p>Tran Quoc Anh</p>
+    <input id="1-student3" type="number" placeholder="Kiem tra 1 tiet" />
+    <input id="2-student3" type="number" placeholder="kiem tra giua ki" />
+    <input id="3-student3" type="number" placeholder="Kiem tra cuoi ki" /><br />
+    <br />
+    <button type="button" onclick="hamGop()">Xac Nhan</button>
+    <div id="student1"></div>
+    <div id="student2"></div>
+    <div id="student3"></div>
+
+    <script>
+      //   function displayResult() {
+      //     let a = parseInt(document.getElementById("1-student1").value);
+      //     let b = parseInt(document.getElementById("2-student1").value);
+      //     let c = parseInt(document.getElementById("3-student1").value);
+      //     let A = parseInt(document.getElementById("1-student2").value);
+      //     let B = parseInt(document.getElementById("2-student2").value);
+      //     let C = parseInt(document.getElementById("3-student2").value);
+      //     sum1 = (a + b + c) / 3;
+      //     sum2 = (A + B + C) / 3;
+      //     let str = "";
+      //     if (sum1 >= 8) {
+      //       str = "Nguyen Hoang Vu la hoc sinh gioi";
+      //       if (sum2 >= 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh gioi";
+      //       } else if (sum2 > 5 && sum2 < 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh kha";
+      //       } else {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh trung binh";
+      //       }
+      //     } else if (sum1 > 5) {
+      //       document.getElementById("student1").innerText =
+      //         "Nguyen Hoang Vu la hoc sinh kha";
+      //       if (sum2 >= 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh gioi";
+      //       } else if (sum2 > 5 && sum2 < 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh kha";
+      //       } else {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh trung binh";
+      //       }
+      //     } else {
+      //       document.getElementById("student1").innerText =
+      //         "Nguyen Hoang Vu la hoc sinh trung binh";
+      //       if (sum2 >= 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh gioi";
+      //       } else if (sum2 > 5 && sum2 < 8) {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh kha";
+      //       } else {
+      //         document.getElementById("student2").innerText =
+      //           "Nguyen Hoang Bao Tram la hoc sinh trung binh";
+      //       }
+      //     }
+      //     document.getElementById("student1").innerText = str;
+      //   }
+
+      function checkPointStudent(point) {
+        if (point >= 8) {
+          return "Gioi";
+        } else if (point > 5) {
+          return "Kha";
+        } else {
+          return "Yeu";
+        }
+      }
+
+      function getResult() {
+        let a = parseInt(document.getElementById("1-student1").value);
+        let b = parseInt(document.getElementById("2-student1").value);
+        let c = parseInt(document.getElementById("3-student1").value);
+        let total = a + b + c;
+        let tb = total / 3;
+        let ketqua = checkPointStudent(tb);
+        document.getElementById("student1").innerText = ketqua;
+      }
+
+      function getResult2() {
+        let a = +document.getElementById("1-student2").value;
+        let b = parseInt(document.getElementById("2-student2").value);
+        let c = parseInt(document.getElementById("3-student2").value);
+        let total = a + b + c;
+        let tb = total / 3;
+        document.getElementById("student2").innerText = checkPointStudent(tb);
+      }
+
+      function getResult3() {
+        let a = +document.getElementById("1-student3").value;
+        let b = +document.getElementById("2-student3").value;
+        let c = +document.getElementById("3-student3").value;
+        let total = a + b + c;
+        let tb = total / 3;
+        document.getElementById("student3").innerText = checkPointStudent(tb);
+      }
+
+      function hamGop() {
+        getResult();
+        getResult2();
+        getResult3();
+      }
+    </script>
+  </body>
+</html>

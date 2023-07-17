@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding-left: 550px;
+            padding-top: 70px;
+        }
+        table{
+            padding: 0px;
+            border-spacing: 50px;
+        }
+        td{
+            height: 60px;
+            width: 60px;
+        }
+        button{
+            height: 60px;
+            width: 60px; 
+            font-size: 40px;
+        }
+        .firstrow{
+            text-align: end;
+            
+        }
+        #result{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="1" >
+            <tr class="firstrow">
+                <td colspan="4">
+                    <span id="result"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="calNumber('1')">1</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('2')">2</button>
+                </td>     
+                <td>
+                    <button type="button" onclick="calNumber('3')">3</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="calNumber('4')">4</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('5')">5</button>
+                </td>     
+                <td>
+                    <button type="button" onclick="calNumber('6')">6</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="calNumber('7')">7</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('8')">8</button>
+                </td>     
+                <td>
+                    <button type="button" onclick="calNumber('9')">9</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('*')">X</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="calNumber('c')">C</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('0')">0</button>
+                </td>     
+                <td>
+                    <button type="button" onclick="calNumber('=')">=</button>
+                </td>
+                <td>
+                    <button type="button" onclick="calNumber('/')">/</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        function calNumber(x){
+            let result = document.getElementById('result').innerText;
+            switch(x){
+                case '1' :
+                case '2' :
+                case '3' :
+                case '4' :
+                case '5' :
+                case '6' :
+                case '7' :
+                case '8' :
+                case '9' :
+                case '0' :
+                case '+' :
+                case '-' :
+                case '*' :
+                case '/' :
+                    // noi chuoi
+                    result += x; break;
+                case '=' : 
+                // tinh toan
+                    result = eval(result); break;
+                case 'c' :
+                    result=''; break;
+            }
+            document.getElementById('result').innerText=result;
+        }
+    </script>
+</body>
+</html>

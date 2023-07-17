@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array2d = [];
+      let row = +prompt("nhap so dong: ");
+      let col = +prompt("nhap so cot: ");
+      for (i = 0; i < row; i++) {
+        array2d[i] = [];
+        for (j = 0; j < col; j++) {
+          array2d[i][j] = +prompt("nhap phan tu: [" + i + "]" + "[" + j + "]");
+        }
+      }
+      console.log(array2d);
+      let min = array2d[0][0];
+      for (i = 0; i < array2d.length; i++) {
+        for (j = 0; j < array2d[i].length; j++) {
+          if (min > array2d[i][j]) {
+            min = array2d[i][j];
+            x = i;
+            y = j;
+          }
+        }
+      }
+      alert(
+        "Gia tri nho nhat trong mang 2 chieu la: " +
+          min +
+          "tai vi tri [" +
+          x +
+          "]" +
+          "[" +
+          y +
+          "]"
+      );
+    </script>
+  </body>
+</html>

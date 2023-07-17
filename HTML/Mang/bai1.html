@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="element" type="text" />
+    <button type="button" onclick="add_element_to_array()">Add</button>
+    <button type="button" onclick="showArray()">Display</button>
+    <div id="result"></div>
+    <script>
+      let x = 0;
+      let array = [];
+
+      function add_element_to_array() {
+        array[x] = document.getElementById("element").value;
+        alert("Elemnt: " + array[x] + " added at index " + x);
+        x++;
+        document.getElementById("element").value = "";
+      }
+      function showArray() {
+        let e = "<hr>";
+        for (i = 0; i < array.length; i++) {
+          e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+      }
+    </script>
+  </body>
+</html>

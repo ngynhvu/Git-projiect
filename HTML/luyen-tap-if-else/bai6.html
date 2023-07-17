@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = +prompt("hay nhap doanh so cua tung tuan:");
+    
+        if(total < 100){
+            alert('vi doanh so thang nay la: '+ total + "<br>"+"nen chua du dieu kien nhan hoa hong");
+        }else if(total<300){
+            alert('vi doanh so thang nay la: '+ total + "<br>"+"nen ban nhan duoc 5% hoa hong: "+ total*5/100);
+        }else{
+            alert("thang nay ban da vuot chi tieu nen nhan duoc 15% hoa hong: "+total*15/100);
+        }
+    </script>
+</body>
+</html>

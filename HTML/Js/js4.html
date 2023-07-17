@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b><center>Nguyen Hoang Vu</center></b>
+    <button type="button" onclick="showPonit()">ket qua</button>
+    <script>
+        function showPonit(){
+            let physics = prompt('nhap diem ly :');
+            let chemis = prompt("nhap diem hoa :");
+            let biology = prompt("nhap diem sinh :");
+            let A = parseInt(physics);
+            let B = parseInt(chemis);
+            let C = parseInt(biology);
+            S = A + B + C;
+            document.write("tong diem cua 3 mon la :"+S);
+            N = S/3
+            document.write("diem trung binh cua Vu la :"+N);
+        }
+    </script>
+</body>
+</html>

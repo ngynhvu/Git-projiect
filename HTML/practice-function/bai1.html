@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="showMessage()">Mở hộp thoại</button>
+    <div id="box"></div>
+    <br />
+    <button type="button" onclick="getMessage()">mở hộp thư</button>
+    <div id="box2"></div>
+
+    <script>
+      function showMessage() {
+        let result =
+          "<textarea id=" +
+          "element>" +
+          "</textarea>" +
+          "<br>" +
+          "<button onclick=" +
+          "showElement()" +
+          ">gui</button>";
+        document.getElementById("box").innerHTML = result;
+      }
+      function showElement(text) {
+        text = document.getElementById("element").value;
+        alert(text);
+      }
+      //   function showMessage() {
+      //     let result =
+      //       "<textarea id=" +
+      //       "element>" +
+      //       "</textarea>" +
+      //       "<br>" +
+      //       "<button onclick=" +
+      //       "showElement()" +
+      //       ">gui</button>";
+      //     document.getElementById("box").innerHTML = result;
+      //   }
+      //   function showElement(text) {
+      //     text = document.getElementById("element").value;
+      //     return text;
+      //   }
+      //   function getMessage(text) {
+      //     text = document.getElementById("element").value;
+      //     let result = "<textarea id=" + "element2>" + "</textarea>" + "<br>";
+      //     document.getElementById("box2").innerHTML = result;
+      //     document.getElementById("element2").value = text;
+      //   }
+    </script>
+  </body>
+</html>
