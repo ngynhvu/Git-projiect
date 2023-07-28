@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Temperature {
+        constructor(C) {
+          this.C = C;
+        }
+        getF() {
+          return this.C * 1.8 + 32;
+        }
+        getK() {
+          return this.C + 273.15;
+        }
+      }
+      let Celsius = new Temperature(prompt("Enter Celsius:"));
+      alert("Fahrenheit: " + Celsius.getF() + "; Kelvin: " + Celsius.getK());
+    </script>
+  </body>
+</html>

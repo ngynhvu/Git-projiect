@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <img
+      src="sipderman.png"
+      id="hero"
+      width="50px"
+      height="70px"
+      positon="relative"
+    /> -->
+
+    <!-- <script>
+      class Character {
+        constructor(image, ) {
+          this.speed = +speed;
+          this.hero = hero;
+        }
+        // upArrowPressed() {
+        //   return (this.hero.style.top =
+        //     +this.hero.style.top - this.speed + "px");
+        // }
+        // downArrowPressed() {
+        //   return (this.hero.style.top =
+        //     +this.hero.style.top + this.speed + "px");
+        // }
+        // leftArrowPressed() {
+        //   return (this.hero.style.left =
+        //     +this.hero.style.left - this.speed + "px");
+        // }
+        // rightnArrowPressed() {
+        //   return (this.hero.style.left =
+        //     +this.hero.style.left + this.speed + "px");
+        // }
+        // moveSelection(evt) {
+        //   switch (evt.keycode) {
+        //     case 38:
+        //       upArrowPressed();
+        //       break;
+        //     case 40:
+        //       downArrowPressed();
+        //       break;
+        //     case 37:
+        //       leftArrowPressed();
+        //       break;
+        //     case 39:
+        //       rightnArrowPressed();
+        //       break;
+        //   }
+        // }
+      }
+      let hero = document.getElementById("hero").innerHTML;
+      let sipderman = new Character(20, hero);
+    </script> -->
+    <div id="game"></div>
+
+    <script>
+      class Hero {
+        constructor(image, top, left, width, height, speed, right) {
+          this.image = image;
+          this.top = top;
+          this.left = left;
+          this.width = width;
+          this.height = height;
+          this.speed = speed;
+          this.right = right;
+        }
+        getHeroElement() {
+          return `<img src="${this.image}" alt="" style="top: ${this.top}px; left: ${this.left}px; right: ${this.right}px; position: absolute;">`;
+        }
+        moveRight() {
+          this.left += 20;
+          console.log("ok: " + this.left);
+        }
+        moveDown() {
+          this.top += 20;
+        }
+        moveLeft() {
+          this.right += 20;
+        }
+        moveUp() {
+          this.top -= 20;
+        }
+      }
+
+      let hero = new Hero("spiderman.png", 20, 30, 150, 200, 20, 30);
+      function start() {
+        // console.log(herowindow.innerWidth);
+        if (hero.left < window.innerWidth - hero.width) {
+          console.log(hero.getHeroElement());
+          console.log(hero.left);
+          console.log(window.innerWidth - hero.width);
+          hero.moveRight();
+          document.getElementById("game").innerHTML = hero.getHeroElement();
+        } else if (hero.top < window.innerHeight - hero.height) {
+          console.log("a");
+          hero.moveDown();
+          document.getElementById("game").innerHTML = hero.getHeroElement();
+        } else if (hero.right < ) {
+          hero.moveLeft();
+          console.log(hero.right);
+          document.getElementById("game").innerHTML = hero.getHeroElement();
+        }
+        // if (hero.left < window.innerWidth - hero.width) {
+        //   hero.moveLeft();
+        //   document.getElementById("game").innerHTML = hero.getHeroElement();
+        // }
+        // if (hero.top < window.innerHeight - hero.height) {
+        //   hero.moveUp();
+        //   document.getElementById("game").innerHTML = hero.getHeroElement();
+        // }
+        const id = setTimeout(start, hero.speed);
+      }
+      start();
+    </script>
+  </body>
+</html>

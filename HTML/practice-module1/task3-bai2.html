@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array1 = [];
+      let array2 = [];
+      let missingArray = [];
+      for (i = 0; i < 5; i++) {
+        array1[i] = +prompt("Nhap phan tu mang 1");
+      }
+      for (i = 0; i < 7; i++) {
+        array2[i] = +prompt("Nhap phan tu mang 2");
+      }
+      for (i = 0; i < array2.length; i++) {
+        let flag = true; // neu flag true array1[i] khong co trong array2
+        for (j = 0; j < array1.length; j++) {
+          if (array2[i] == array1[j]) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag == true) {
+          missingArray.push(array2[i]);
+        }
+      }
+      alert(missingArray);
+    </script>
+  </body>
+</html>

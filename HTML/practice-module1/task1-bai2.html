@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = ["u", "e", "o", "a", "i"];
+      function checkKeyWord(key) {
+        key = prompt("Nhap 1 ki tu bat ki");
+        for (i = 0; i < array.length; i++) {
+          if (key === array[i]) {
+            return key + " la 1 nguyen am";
+          }
+        }
+        return key + " khong phai la 1 nguyen am";
+      }
+      alert(checkKeyWord());
+    </script>
+  </body>
+</html>

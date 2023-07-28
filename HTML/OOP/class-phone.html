@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="Apple">
+      <div class="label">
+        <center>Apple</center>
+        <div id="A-battery"></div>
+      </div>
+      <div class="get-message">
+        <div id="A-box">
+          <canvas
+            id="myCanvas"
+            width="1368px"
+            height="200px"
+            style="border: 1px solid #d3d3d3"
+          ></canvas>
+        </div>
+      </div>
+      <div class="send-message">
+        <textarea id="A-message" width="1368px" height="20px"></textarea>
+      </div>
+    </div>
+    <div class="Nokia">
+      <div class="label">
+        <center>Nokia</center>
+        <div id="N-battery"></div>
+      </div>
+      <div class="get-message">
+        <div id="N-box">
+          <canvas
+            id="myCanvas2"
+            width="1368px"
+            height="200px"
+            style="border: 1px solid #d3d3d3"
+          ></canvas>
+        </div>
+      </div>
+      <div class="send-message">
+        <textarea id="N-message" width="1368px" height="20px"></textarea>
+      </div>
+    </div> -->
+
+    <script>
+      class Mobile {
+        constructor(phoneNumber) {
+          this.phoneNumber = phoneNumber;
+          this.battery = 100;
+          this.sendingMessage = "";
+          this.saveMessage = [];
+          this.saveSendMessage = [];
+          this.status = false;
+        }
+
+        getBattery() {
+          return this.battery;
+        }
+        getSendingMessage() {
+          return this.sendingMessage;
+        }
+        getSaveMessage() {
+          return this.saveMessage;
+        }
+        getSaveSendMessage() {
+          return this.saveSendMessage;
+        }
+        onPhone() {
+          return this.status == true;
+        }
+        offPhone() {
+          return this.status == false;
+        }
+        checkStatus() {
+          if (status == true) {
+            return this.name + " is active   battery: " + this.battery;
+          } else {
+            return this.name + " is inactive   battery: " + this.battery;
+          }
+        }
+        chargePhone(vv) {
+          return this.battery == vv;
+        }
+        composeMessage() {
+          if (status == true) {
+            this.sendingMessage = prompt("");
+            this.battery--;
+          }
+        }
+        getMessage(message) {
+          this.saveMessage.push(message);
+          this.battery--;
+        }
+        sendMessage() {
+          let receivePhoneNumber = prompt("Enter Phone Number: ");
+          this.composeMessage();
+          for (let i = 0; i < phoneStorage.length; i++) {
+            if (receivePhoneNumber == phoneStorage[i].phoneNumber) {
+              phoneStorage[i].getMessage(this.sendingMessage);
+            }
+          }
+          this.battery--;
+        }
+        checkInbox() {
+          document.write(this.saveMessage);
+          this.battery--;
+        }
+        saveMessage() {
+          this.saveMessage = this.saveSendMessage;
+        }
+      }
+
+      let apple = new Mobile("111");
+      let nokia = new Mobile("222");
+      let phoneStorage = [apple, nokia];
+      apple.checkStatus();
+      apple.sendMessage();
+      apple.chargePhone(50);
+      nokia.checkInbox();
+      console.log(apple.saveMessage(), nokia.saveMessage());
+    </script>
+  </body>
+</html>

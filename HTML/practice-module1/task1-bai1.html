@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tax(salary) {
+        if (salary < 7) {
+          return (salary * 5) / 100;
+        } else if (salary >= 7 && salary < 15) {
+          return (salary * 10) / 100;
+        } else {
+          return (salary * 20) / 100;
+        }
+      }
+      let salary = +prompt("hay nhap luong thang nay don vi trieu dong");
+      alert(tax(salary));
+    </script>
+  </body>
+</html>

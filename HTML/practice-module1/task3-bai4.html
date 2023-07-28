@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menu</h1>
+    <br />
+    <div id="menu"></div>
+    <div id="bill"></div>
+    <div id="total"></div>
+    <script>
+      let array = [
+        "Coffee",
+        "Orange",
+        "Carrot Juice",
+        "Tomato Juice",
+        "Fresh Water",
+        "Coconut",
+      ];
+      let priceArray = [20, 30, 30, 30, 15, 40];
+      let totalArray = [];
+      let drink = "";
+      let price = "";
+      let result = "";
+      function showMenu() {
+        let result = "";
+        result += "<table>";
+        for (i = 0; i < array.length; i++) {
+          result +=
+            "<tr>" +
+            "<td>" +
+            array[i] +
+            "</td>" +
+            "<td>" +
+            "<button onclick=" +
+            'getDrinks("' +
+            i +
+            '")>+</button>' +
+            "</td>" +
+            "</tr>";
+        }
+        result +=
+          "<tr><button onclick=" + "printBill()>" + "Tinh Tien</button>";
+        result += "</table>";
+        document.getElementById("menu").innerHTML = result;
+      }
+      showMenu();
+      function getDrinks(index) {
+        let data = "";
+        data = array[index] + " :" + priceArray[index] + "<br>";
+        result += data;
+        totalArray.push(priceArray[index]);
+        document.getElementById("bill").innerHTML = result;
+      }
+      let total = 0;
+      function printBill() {
+        for (i = 0; i < totalArray.length; i++) {
+          total += parseInt(totalArray[i]);
+        }
+        document.getElementById("total").innerHTML = "Total: " + total;
+      }
+    </script>
+  </body>
+</html>

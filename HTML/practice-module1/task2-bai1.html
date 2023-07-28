@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let result = "";
+      for (i = 1; i < 6; i++) {
+        result += "<br>";
+        for (k = 4; k >= 1; k--) {
+          result += "";
+        }
+        for (j = 1; j <= i; j + 2) {
+          result += "*";
+        }
+        for (k = 4; k >= 1; k--) {
+          result += "";
+        }
+      }
+      //   for (i = 5; i >= 1; i--) {
+      //     result += "<br>";
+      //     for (j = 1; j <= i; j++) {
+      //       result += "*";
+      //     }
+      //   }
+      document.write(result);
+    </script>
+  </body>
+</html>

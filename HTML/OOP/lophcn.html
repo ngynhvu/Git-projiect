@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="1368px"
+      height="768px"
+      style="border: 1px solid #d3d3d3"
+    ></canvas>
+
+    <script>
+      let Rectangle = function (width, height) {
+        // this.x = x;
+        // this.y = y;
+        this.width = width;
+        this.height = height;
+        this.getArea = function () {
+          return width * height;
+        };
+        this.getPerimeter = function () {
+          return (width + height) * 2;
+        };
+      };
+      function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+      }
+      function getRandomColor() {
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+      }
+      function createRectangle() {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var color = getRandomColor();
+        ctx.fillRect(x, y, 100, 200);
+        ctx.fillStyle = color;
+      }
+      createRectangle();
+      let rectangle = new Rectangle(100, 200);
+      alert(
+        "Area: " +
+          rectangle.getArea() +
+          "; Perimeter: " +
+          rectangle.getPerimeter()
+      );
+    </script>
+  </body>
+</html>
